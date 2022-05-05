@@ -18,7 +18,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMotorcycleSpeedUpSound()
     {
-        motorcycleSpeedUpSound.Play();
+        if(!motorcycleSpeedUpSound.isPlaying)
+            motorcycleSpeedUpSound.Play();
     }
 
     public void StopMotorcycleSpeedUpSound()
@@ -28,7 +29,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMotorcycleEngineSound()
     {
-        motorcycleEngineSound.Play();
+        if(!motorcycleEngineSound.isPlaying)
+            motorcycleEngineSound.Play();
     }
 
     public void StopMotorcycleEngineSound()
@@ -38,7 +40,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMotorcycleBrakingSound()
     {
-        audioSource.PlayOneShot(motorcycleBrakingSound);
+        if(!audioSource.isPlaying)
+            audioSource.PlayOneShot(motorcycleBrakingSound);
     }
 
 }
